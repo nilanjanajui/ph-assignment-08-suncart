@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #994700;
+  --color-primary-container: #ff7a00;
+  --color-primary-fixed: #ffdbc8;
+  --color-primary-fixed-dim: #ffb68b;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #5c2800;
+
+  --color-secondary: #735c00;
+  --color-secondary-container: #fdd348;
+  --color-on-secondary-container: #725b00;
+
+  --color-tertiary: #00668a;
+  --color-tertiary-container: #12ace6;
+  --color-tertiary-fixed: #c4e7ff;
+  --color-on-tertiary-container: #003c53;
+
+  --color-background: #fff8f5;
+  --color-surface: #fff8f5;
+  --color-surface-container-low: #fff1ea;
+  --color-surface-container: #ffeadf;
+  --color-surface-container-high: #fbe3d7;
+  --color-surface-container-highest: #f6ded2;
+  --color-surface-container-lowest: #ffffff;
+
+  --color-on-background: #251912;
+  --color-on-surface: #251912;
+  --color-on-surface-variant: #584235;
+  --color-outline: #8c7263;
+  --color-outline-variant: #e0c0af;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+.sunset-gradient {
+  background: linear-gradient(135deg, #ff7a00 0%, #ffdbc8 100%);
+}
+
+.glass-panel {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tropical-accent {
+  filter: blur(80px);
+  opacity: 0.15;
+  z-index: -1;
+}

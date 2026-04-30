@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "Ocean View Aviators",
+        "brand": "SunShade",
+        "price": 85,
+        "rating": 4.7,
+        "stock": 12,
+        "description": "Gold-rimmed aviator sunglasses with UV400 polarized lenses. Perfect for beach days and sunny drives.",
+        "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 2,
+        "name": "Zinc Shield SPF 50",
+        "brand": "GlowSkin",
+        "price": 24,
+        "rating": 4.5,
+        "stock": 30,
+        "description": "Water-resistant reef-safe mineral sunscreen. Keeps your skin protected for up to 80 minutes in water.",
+        "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 3,
+        "name": "Breezy Linen Top",
+        "brand": "OceanWear",
+        "price": 45,
+        "rating": 4.6,
+        "stock": 20,
+        "description": "100% organic breathable linen shirt. Stay cool and stylish under the summer sun.",
+        "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 4,
+        "name": "Artisan Tote Bag",
+        "brand": "BeachVibe",
+        "price": 62,
+        "rating": 4.8,
+        "stock": 8,
+        "description": "Hand-woven eco-friendly beach tote. Spacious enough for all your summer essentials.",
+        "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 5,
+        "name": "Wide Brim Straw Hat",
+        "brand": "SunShade",
+        "price": 38,
+        "rating": 4.4,
+        "stock": 15,
+        "description": "Wide-brimmed UPF 50+ straw hat. Lightweight and stylish sun protection for any outdoor adventure.",
+        "image": "https://images.unsplash.com/photo-1521369909029-2afed882baee?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 6,
+        "name": "Aloe After-Sun Gel",
+        "brand": "GlowSkin",
+        "price": 18,
+        "rating": 4.9,
+        "stock": 50,
+        "description": "Cooling aloe vera gel for post-sun care. Soothes and hydrates sun-exposed skin instantly.",
+        "image": "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 7,
+        "name": "Flip Flops Pro",
+        "brand": "BeachVibe",
+        "price": 29,
+        "rating": 4.3,
+        "stock": 25,
+        "description": "Comfortable anti-slip flip flops with memory foam insole. Perfect for beach and poolside.",
+        "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=500",
+        "category": "Footwear"
+    }
+]
