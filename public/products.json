@@ -75,5 +75,148 @@
         "description": "Comfortable anti-slip flip flops with memory foam insole. Perfect for beach and poolside.",
         "image": "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=500",
         "category": "Footwear"
+    },
+    {
+        "id": 8,
+        "name": "Coral Reef Swim Shorts",
+        "brand": "OceanWear",
+        "price": 40,
+        "rating": 4.5,
+        "stock": 18,
+        "description": "Quick-dry swim shorts with tropical coral patterns and mesh lining.",
+        "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 9,
+        "name": "HydraMist Face Spray",
+        "brand": "GlowSkin",
+        "price": 16,
+        "rating": 4.6,
+        "stock": 40,
+        "description": "Refreshing facial mist infused with cucumber and mint extracts.",
+        "image": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 10,
+        "name": "Seaside Canvas Sneakers",
+        "brand": "BeachVibe",
+        "price": 55,
+        "rating": 4.7,
+        "stock": 14,
+        "description": "Lightweight breathable sneakers ideal for coastal walks and casual outings.",
+        "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500",
+        "category": "Footwear"
+    },
+    {
+        "id": 11,
+        "name": "Palm Breeze Kimono",
+        "brand": "OceanWear",
+        "price": 52,
+        "rating": 4.8,
+        "stock": 11,
+        "description": "Flowy lightweight kimono with palm leaf prints for a relaxed beach look.",
+        "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 12,
+        "name": "UV Guard Rash Vest",
+        "brand": "SunShade",
+        "price": 48,
+        "rating": 4.5,
+        "stock": 16,
+        "description": "Long-sleeve rash guard with UPF 50+ fabric for maximum sun safety.",
+        "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 13,
+        "name": "Coconut Breeze Body Lotion",
+        "brand": "GlowSkin",
+        "price": 21,
+        "rating": 4.7,
+        "stock": 35,
+        "description": "Hydrating coconut-scented lotion designed for dry summer skin.",
+        "image": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 14,
+        "name": "Sunset Wave Backpack",
+        "brand": "BeachVibe",
+        "price": 68,
+        "rating": 4.8,
+        "stock": 9,
+        "description": "Water-resistant backpack with padded straps and multiple beach-ready compartments.",
+        "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 15,
+        "name": "Shell Charm Anklet",
+        "brand": "OceanWear",
+        "price": 19,
+        "rating": 4.4,
+        "stock": 22,
+        "description": "Handcrafted shell anklet inspired by tropical island fashion.",
+        "image": "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 16,
+        "name": "Driftwood Slide Sandals",
+        "brand": "BeachVibe",
+        "price": 34,
+        "rating": 4.5,
+        "stock": 27,
+        "description": "Soft cushioned slide sandals with textured anti-slip soles.",
+        "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500",
+        "category": "Footwear"
+    },
+    {
+        "id": 17,
+        "name": "Tropical Escape Sunglasses",
+        "brand": "SunShade",
+        "price": 72,
+        "rating": 4.9,
+        "stock": 10,
+        "description": "Oversized polarized sunglasses with premium scratch-resistant lenses.",
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500",
+        "category": "Accessories"
+    },
+    {
+        "id": 18,
+        "name": "Lagoon Breeze Maxi Dress",
+        "brand": "OceanWear",
+        "price": 64,
+        "rating": 4.8,
+        "stock": 13,
+        "description": "Elegant flowy maxi dress crafted from lightweight breathable fabric.",
+        "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500",
+        "category": "Clothing"
+    },
+    {
+        "id": 19,
+        "name": "Vitamin C Sun Serum",
+        "brand": "GlowSkin",
+        "price": 28,
+        "rating": 4.6,
+        "stock": 32,
+        "description": "Brightening serum with antioxidants to protect and nourish skin after sun exposure.",
+        "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500",
+        "category": "Skincare"
+    },
+    {
+        "id": 20,
+        "name": "Marina Beach Towel",
+        "brand": "BeachVibe",
+        "price": 26,
+        "rating": 4.7,
+        "stock": 45,
+        "description": "Extra-large microfiber beach towel with fast-dry technology and vibrant prints.",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500",
+        "category": "Accessories"
     }
 ]
