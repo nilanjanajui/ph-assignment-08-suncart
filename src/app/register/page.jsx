@@ -11,7 +11,6 @@ import { FcGoogle } from "react-icons/fc";
 export default function RegisterPage() {
     const router = useRouter();
 
-    const [sessionChecked, setSessionChecked] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [photoURL, setPhotoURL] = useState("");
@@ -23,21 +22,9 @@ export default function RegisterPage() {
 
     useEffect(() => {
         authClient.getSession().then(({ data }) => {
-            if (data?.session) {
-                router.replace("/");
-            } else {
-                setSessionChecked(true);
-            }
+            if (data?.session) router.replace("/");
         });
     }, [router]);
-
-    if (!sessionChecked) {
-        return (
-            <div className="min-h-screen flex items-center justify-center bg-amber-50">
-                <FiSun className="animate-spin text-amber-400 text-5xl" />
-            </div>
-        );
-    }
 
     const handleGoogle = async () => {
         await authClient.signIn.social({
