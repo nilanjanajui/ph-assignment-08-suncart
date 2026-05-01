@@ -2,15 +2,19 @@ import { betterAuth } from "better-auth";
 import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
-function getDb() {
-    if (!global._mongoClient) {
-        global._mongoClient = new MongoClient(process.env.MONGODB_URI);
-    }
-    return global._mongoClient;
+const uri = process.env.MONGODB_URI;
+
+if (!global._mongoClientPromise) {
+    const client = new MongoClient(uri);
+    global._mongoClientPromise = client.connect();
 }
 
+const clientPromise = global._mongoClientPromise;
+const connectedClient = await clientPromise;
+const db = connectedClient.db("suncart");
+
 export const auth = betterAuth({
-    database: mongodbAdapter(getDb().db("suncart"), { client: getDb() }),
+    database: mongodbAdapter(db, { client: connectedClient }),
     trustedOrigins: [
         "https://ph-assignment-08-suncart-83dg.vercel.app",
         "http://localhost:3000",
