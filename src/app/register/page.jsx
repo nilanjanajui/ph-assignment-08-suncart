@@ -14,6 +14,7 @@ export default function RegisterPage() {
     const [sessionChecked, setSessionChecked] = useState(false);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [photoURL, setPhotoURL] = useState("");
     const [password, setPassword] = useState("");
     const [confirm, setConfirm] = useState("");
     const [showPass, setShowPass] = useState(false);
@@ -67,7 +68,8 @@ export default function RegisterPage() {
             name: name.trim(),
             email,
             password,
-            callbackURL: "/",
+            image: photoURL.trim() || undefined,
+            callbackURL: "/login",
         });
 
         setLoading(false);
@@ -75,8 +77,8 @@ export default function RegisterPage() {
         if (error) {
             toast.error(error.message || "Registration failed. Please try again.");
         } else {
-            toast.success("☀️ Account created! Welcome to SunCart.");
-            router.push("/");
+            toast.success("☀️ Account created! Please sign in.");
+            router.push("/login");
         }
     };
 
@@ -140,6 +142,20 @@ export default function RegisterPage() {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             placeholder="you@example.com"
+                            className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
+                        />
+                    </div>
+
+                    {/* Photo URL */}
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-1">
+                            Photo URL <span className="text-gray-400 font-normal">(optional)</span>
+                        </label>
+                        <input
+                            type="url"
+                            value={photoURL}
+                            onChange={(e) => setPhotoURL(e.target.value)}
+                            placeholder="https://example.com/photo.jpg"
                             className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 transition"
                         />
                     </div>

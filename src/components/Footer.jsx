@@ -33,6 +33,7 @@ export default function Footer() {
                             <li><Link href="/products" className="hover:text-orange-400 transition-colors">Products</Link></li>
                             <li><Link href="/login" className="hover:text-orange-400 transition-colors">Login</Link></li>
                             <li><Link href="/register" className="hover:text-orange-400 transition-colors">Register</Link></li>
+                            <li><Link href="/privacy-policy" className="hover:text-orange-400 transition-colors">Privacy Policy</Link></li>
                         </ul>
                     </div>
 
@@ -41,15 +42,20 @@ export default function Footer() {
                         <h3 className="text-white font-semibold mb-4">Contact</h3>
                         <ul className="space-y-2 text-sm text-gray-400">
                             <li>📧 support@suncart.com</li>
-                            <li>📞 +1 (800) SUN-CART</li>
+                            <li>📞 +1 (80023456) SUN-CART</li>
                             <li>📍 123 Beach Ave, Miami, FL</li>
                         </ul>
                     </div>
                 </div>
 
-                <p className="text-center text-sm text-gray-500 mt-6">
-                    © {new Date().getFullYear()} SunCart. All rights reserved. Made with ☀️
-                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-2 mt-6">
+                    <p className="text-sm text-gray-500">
+                        © {new Date().getFullYear()} SunCart. All rights reserved. Made with ☀️
+                    </p>
+                    <Link href="/privacy-policy" className="text-sm text-gray-500 hover:text-orange-400 transition-colors">
+                        Privacy Policy
+                    </Link>
+                </div>
             </div>
         </footer>
     );
