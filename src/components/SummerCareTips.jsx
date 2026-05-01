@@ -25,18 +25,18 @@ const tips = [
 
 export default function SummerCareTips() {
     return (
-        <section className="py-14 px-4 bg-amber-50">
-            <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
+        <section className="animate__animated animate__fadeInLeft py-14 px-4 bg-amber-50">
+            <h2 className="animate__animated animate__fadeInDown text-3xl font-bold text-center text-gray-800 mb-2">
                 Summer Care Tips
             </h2>
-            <p className="text-center text-gray-500 mb-10">
+            <p className="animate__animated animate__fadeInUp text-center text-gray-500 mb-10">
                 Stay safe and refreshed all season long
             </p>
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {tips.map((tip, i) => (
                     <div
                         key={i}
-                        className="bg-white rounded-2xl p-6 text-center shadow hover:shadow-md transition"
+                        className="animate__animated animate__fadeInUp bg-white rounded-2xl p-6 text-center shadow hover:shadow-md transition"
                     >
                         <div className="flex justify-center mb-3">{tip.icon}</div>
                         <h3 className="font-bold text-gray-800 mb-2">{tip.title}</h3>

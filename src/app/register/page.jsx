@@ -20,7 +20,6 @@ export default function RegisterPage() {
     const [showConfirm, setShowConfirm] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    // ── Session guard ──────────────────────────────────────────
     useEffect(() => {
         authClient.getSession().then(({ data }) => {
             if (data?.session) {
@@ -31,7 +30,6 @@ export default function RegisterPage() {
         });
     }, [router]);
 
-    // ── Loading spinner while checking session ─────────────────
     if (!sessionChecked) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-amber-50">
@@ -40,7 +38,6 @@ export default function RegisterPage() {
         );
     }
 
-    // ── Google OAuth ───────────────────────────────────────────
     const handleGoogle = async () => {
         await authClient.signIn.social({
             provider: "google",
@@ -48,7 +45,6 @@ export default function RegisterPage() {
         });
     };
 
-    // ── Email/password register ────────────────────────────────
     const handleRegister = async (e) => {
         e.preventDefault();
 
@@ -84,24 +80,25 @@ export default function RegisterPage() {
         }
     };
 
-    // ── UI ─────────────────────────────────────────────────────
     return (
         <main className="min-h-screen bg-linear-to-br from-amber-50 via-orange-50 to-yellow-100 flex items-center justify-center px-4 py-12">
-            <div className="w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
+            <div className="animate__animated animate__fadeInDown w-full max-w-md bg-white rounded-3xl shadow-xl p-8">
 
                 {/* Header */}
                 <div className="text-center mb-8">
-                    <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-100 mb-3">
+                    <div className="animate__animated animate__bounceIn inline-flex items-center justify-center w-14 h-14 rounded-full bg-amber-100 mb-3">
                         <FiSun className="text-amber-500 text-3xl" />
                     </div>
-                    <h1 className="text-2xl font-bold text-gray-800">Create your account</h1>
+                    <h1 className="animate__animated animate__fadeInDown animate__delay-1s text-2xl font-bold text-gray-800">
+                        Create your account
+                    </h1>
                     <p className="text-sm text-gray-500 mt-1">Join SunCart and embrace the summer ☀️</p>
                 </div>
 
                 {/* Google OAuth */}
                 <button
                     onClick={handleGoogle}
-                    className="w-full flex items-center justify-center gap-3 border border-gray-200 rounded-xl py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition mb-6"
+                    className="animate__animated animate__fadeInUp animate__delay-1s w-full flex items-center justify-center gap-3 border border-gray-200 rounded-xl py-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition mb-6"
                 >
                     <FcGoogle className="text-xl" />
                     Sign up with Google
@@ -193,7 +190,6 @@ export default function RegisterPage() {
                                 {showConfirm ? <FiEyeOff /> : <FiEye />}
                             </button>
                         </div>
-                        {/* Live match hint */}
                         {confirm && (
                             <p className={`text-xs mt-1 ${password === confirm ? "text-green-500" : "text-red-400"}`}>
                                 {password === confirm ? "✓ Passwords match" : "✗ Passwords do not match"}
@@ -205,7 +201,7 @@ export default function RegisterPage() {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="w-full bg-amber-400 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+                        className="animate__animated animate__fadeInUp animate__delay-2s w-full bg-amber-400 hover:bg-amber-500 text-white font-semibold py-3 rounded-xl transition disabled:opacity-60 disabled:cursor-not-allowed mt-2"
                     >
                         {loading ? "Creating account…" : "Create Account"}
                     </button>

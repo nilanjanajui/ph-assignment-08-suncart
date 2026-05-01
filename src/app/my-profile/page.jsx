@@ -36,13 +36,13 @@ export default function MyProfilePage() {
         <div className="min-h-screen bg-linear-to-br from-orange-50 to-yellow-50 py-16 px-4">
             <div className="max-w-md mx-auto">
                 {/* Card */}
-                <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div className="animate__animated animate__fadeInUp bg-white rounded-3xl shadow-xl overflow-hidden">
                     {/* Banner */}
                     <div className="h-28 bg-linear-to-r from-orange-400 to-yellow-400" />
 
                     {/* Avatar */}
                     <div className="flex flex-col items-center -mt-14 px-6 pb-8">
-                        <div className="w-28 h-28 rounded-full border-4 border-white shadow-lg overflow-hidden bg-orange-100 flex items-center justify-center">
+                        <div className="animate__animated animate__zoomIn w-28 h-28 rounded-full border-4 border-white shadow-lg overflow-hidden bg-orange-100 flex items-center justify-center">
                             {user?.image ? (
                                 <Image
                                     src={user.image}
@@ -60,7 +60,7 @@ export default function MyProfilePage() {
                         </div>
 
                         {/* Name */}
-                        <h1 className="mt-4 text-2xl font-bold text-gray-800">
+                        <h1 className="animate__animated animate__fadeInDown animate__delay-1s mt-4 text-2xl font-bold text-gray-800">
                             {user?.name || "User"}
                         </h1>
 
@@ -74,7 +74,7 @@ export default function MyProfilePage() {
                         <div className="w-full border-t border-gray-100 my-6" />
 
                         {/* Info rows */}
-                        <div className="w-full space-y-4">
+                        <div className="animate__animated animate__fadeInUp animate__delay-1s w-full space-y-4">
                             <div className="flex items-center gap-3 bg-orange-50 rounded-xl px-4 py-3">
                                 <FiUser className="text-orange-400 text-lg shrink-0" />
                                 <div>
@@ -99,7 +99,7 @@ export default function MyProfilePage() {
                         {/* Update button */}
                         <Link
                             href="/my-profile/update"
-                            className="mt-8 w-full flex items-center justify-center gap-2 bg-linear-to-r from-orange-400 to-yellow-400 hover:from-orange-500 hover:to-yellow-500 text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-md"
+                            className="animate__animated animate__fadeInUp animate__delay-2s mt-8 w-full flex items-center justify-center gap-2 bg-linear-to-r from-orange-400 to-yellow-400 hover:from-orange-500 hover:to-yellow-500 text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-md"
                         >
                             <FiEdit2 />
                             Update Profile

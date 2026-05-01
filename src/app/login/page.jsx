@@ -17,7 +17,6 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const [googleLoading, setGoogleLoading] = useState(false);
 
-    // Redirect if already logged in
     useEffect(() => {
         if (!isPending && session) {
             router.replace("/");
@@ -60,10 +59,8 @@ export default function LoginPage() {
             toast.error("Google sign-in failed.");
             setGoogleLoading(false);
         }
-        // On success, BetterAuth redirects automatically
     };
 
-    // Show nothing while checking session
     if (isPending || session) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-amber-50">
@@ -77,7 +74,7 @@ export default function LoginPage() {
             <div className="w-full max-w-md">
 
                 {/* Card */}
-                <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <div className="animate__animated animate__fadeInDown bg-white rounded-3xl shadow-xl overflow-hidden">
 
                     {/* Top Banner */}
                     <div className="bg-linear-to-r from-amber-400 to-orange-400 px-8 py-8 text-center">
@@ -90,7 +87,9 @@ export default function LoginPage() {
 
                     {/* Form Body */}
                     <div className="px-8 py-8">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-1">Welcome back</h2>
+                        <h2 className="animate__animated animate__fadeInLeft text-2xl font-bold text-gray-800 mb-1">
+                            Welcome back
+                        </h2>
                         <p className="text-gray-500 text-sm mb-6">
                             Don&apos;t have an account?{" "}
                             <Link href="/register" className="text-amber-500 font-semibold hover:underline">
@@ -152,7 +151,7 @@ export default function LoginPage() {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="w-full bg-linear-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 disabled:opacity-60 text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg mt-2"
+                                className="animate__animated animate__fadeInUp animate__delay-1s w-full bg-linear-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 disabled:opacity-60 text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-lg mt-2"
                             >
                                 {loading ? (
                                     <span className="flex items-center justify-center gap-2">
@@ -176,7 +175,7 @@ export default function LoginPage() {
                         <button
                             onClick={handleGoogleLogin}
                             disabled={googleLoading}
-                            className="w-full flex items-center justify-center gap-3 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 disabled:opacity-60 text-gray-700 font-medium py-3 rounded-xl transition-all duration-200"
+                            className="animate__animated animate__fadeInUp animate__delay-2s w-full flex items-center justify-center gap-3 border border-gray-200 hover:border-gray-300 hover:bg-gray-50 disabled:opacity-60 text-gray-700 font-medium py-3 rounded-xl transition-all duration-200"
                         >
                             {googleLoading ? (
                                 <span className="w-4 h-4 border-2 border-gray-400 border-t-transparent rounded-full animate-spin" />
