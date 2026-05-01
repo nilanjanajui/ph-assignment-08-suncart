@@ -83,7 +83,7 @@ export default function ProductDetailsPage() {
             <div className="max-w-6xl mx-auto px-4 py-10">
 
                 {/* ── MAIN PRODUCT ── */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="animate__animated animate__fadeIn grid grid-cols-1 lg:grid-cols-2 gap-12">
 
                     {/* LEFT — Image Gallery */}
                     <div>
@@ -143,7 +143,7 @@ export default function ProductDetailsPage() {
                         </nav>
 
                         {/* Product name */}
-                        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                        <h1 className="animate__animated animate__fadeInDown text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
                             {product.name}
                         </h1>
 
@@ -157,7 +157,7 @@ export default function ProductDetailsPage() {
                         </div>
 
                         {/* Price + Stock */}
-                        <div className="flex items-center justify-between flex-wrap gap-3">
+                        <div className="animate__animated animate__fadeInUp animate__delay-1s flex items-center justify-between flex-wrap gap-3">
                             <div className="flex items-end gap-3">
                                 <span className="text-4xl font-extrabold text-gray-900">
                                     ${discountedPrice ?? product.price}
@@ -199,7 +199,7 @@ export default function ProductDetailsPage() {
                         </div>
 
                         {/* Buy Now + Wishlist */}
-                        <div className="flex gap-3 items-center mt-1">
+                        <div className="animate__animated animate__fadeInUp animate__delay-2s flex gap-3 items-center mt-1">
                             <button
                                 onClick={() => toast.success("Buy Now coming soon!")}
                                 className="flex-1 py-4 rounded-2xl font-bold text-white text-base tracking-wide shadow-md hover:shadow-lg hover:opacity-90 transition-all"
@@ -252,7 +252,7 @@ export default function ProductDetailsPage() {
                                 <p className="text-amber-500 text-xs font-bold uppercase tracking-widest mb-1">
                                     Summer Essentials
                                 </p>
-                                <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+                                <h2 className="animate__animated animate__fadeInDown text-2xl md:text-3xl font-extrabold text-gray-900">
                                     You Might Also Like
                                 </h2>
                             </div>
@@ -264,7 +264,7 @@ export default function ProductDetailsPage() {
                             </Link>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                        <div className="animate__animated animate__fadeInUp animate__delay-1s grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                             {relatedProducts.map((p) => (
                                 <Link
                                     key={p.id}

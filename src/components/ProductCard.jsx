@@ -4,7 +4,7 @@ import { FaStar } from "react-icons/fa";
 
 export default function ProductCard({ product }) {
     return (
-        <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col">
+        <div className="animate__animated animate__fadeInUp bg-white rounded-2xl shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col">
             <div className="relative h-52 w-full">
                 <Image
                     src={product.image}

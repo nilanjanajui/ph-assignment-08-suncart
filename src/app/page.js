@@ -15,13 +15,13 @@ export default function Home() {
 
       {/* Featured Products */}
       <section className="py-14 px-4 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
+        <h2 className="animate__animated animate__fadeInDown text-3xl font-bold text-center text-gray-800 mb-2">
           Featured Products
         </h2>
         <p className="text-center text-gray-500 mb-10">
           Handpicked summer essentials just for you
         </p>
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="animate__animated animate__fadeInUp animate__delay-1s max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featured.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

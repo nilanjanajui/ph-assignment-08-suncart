@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const slides = [
     {
@@ -69,9 +70,9 @@ export default function HeroSlider() {
             {slides.map((slide, index) => (
                 <div
                     key={slide.id}
-                className={`absolute inset-0 w-full h-full bg-linear-to-br ${slide.bg}
-            transition-opacity duration-700 ease-in-out
-            ${index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}
+                    className={`absolute inset-0 w-full h-full bg-linear-to-br ${slide.bg}
+                        transition-opacity duration-700 ease-in-out
+                        ${index === current ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"}`}
                 >
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-full flex flex-col lg:flex-row items-center gap-8 lg:gap-12 py-10 sm:py-12 lg:py-0">
 
@@ -79,50 +80,50 @@ export default function HeroSlider() {
                         <div className="flex-1 z-10 w-full text-center lg:text-left">
 
                             {/* Badge */}
-                            <span className="inline-block bg-amber-100 border border-amber-300 text-amber-700 text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 rounded-full mb-4 tracking-wide">
+                            <span className="animate__animated animate__fadeInDown inline-block bg-amber-100 border border-amber-300 text-amber-700 text-[11px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 rounded-full mb-4 tracking-wide">
                                 {slide.badge}
                             </span>
 
                             {/* Heading */}
-                            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-2">
+                            <h1 className="animate__animated animate__fadeInLeft text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-2">
                                 {slide.heading1}{" "}
                                 <span className="text-orange-500 italic">{slide.highlight}</span>
                             </h1>
-                            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-snug">
+                            <h2 className="animate__animated animate__fadeInLeft animate__delay-1s text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 sm:mb-4 leading-snug">
                                 {slide.heading2}
                             </h2>
 
                             {/* Description */}
-                            <p className="text-gray-500 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
+                            <p className="animate__animated animate__fadeInUp animate__delay-1s text-gray-500 text-sm sm:text-base leading-relaxed mb-6 sm:mb-8 max-w-md mx-auto lg:mx-0">
                                 {slide.desc}
                             </p>
 
                             {/* CTA Buttons */}
-                            <div className="flex gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start">
-                                <a
+                            <div className="animate__animated animate__fadeInUp animate__delay-2s flex gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start">
+                                <Link
                                     href="/products"
                                     className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 rounded-full transition shadow-md text-sm sm:text-base"
                                 >
                                     Shop Now
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="/products"
                                     className="border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white font-semibold px-6 sm:px-7 py-2.5 sm:py-3 rounded-full transition text-sm sm:text-base"
                                 >
                                     Explore Deals
-                                </a>
+                                </Link>
                             </div>
                         </div>
 
                         {/* ── Right — Image Grid (tablet+) ── */}
                         <div className="flex-1 w-full hidden sm:flex items-center justify-center">
-                            <div className="grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-xs md:max-w-sm lg:max-w-md">
+                            <div className="animate__animated animate__fadeIn animate__delay-1s grid grid-cols-2 gap-3 sm:gap-4 w-full max-w-xs md:max-w-sm lg:max-w-md">
                                 {slide.images.map((src, i) => (
                                     <div
                                         key={i}
                                         className={`relative rounded-2xl overflow-hidden shadow-lg
-                        h-28 sm:h-36 md:h-40 lg:h-44
-                        ${i % 2 === 0 ? "mt-0" : "mt-5 sm:mt-6"}`}
+                                            h-28 sm:h-36 md:h-40 lg:h-44
+                                            ${i % 2 === 0 ? "mt-0" : "mt-5 sm:mt-6"}`}
                                     >
                                         <Image
                                             src={src}
@@ -138,7 +139,7 @@ export default function HeroSlider() {
 
                         {/* ── Mobile — Single Featured Image ── */}
                         <div className="sm:hidden w-full flex justify-center">
-                            <div className="relative w-60 h-40 rounded-2xl overflow-hidden shadow-lg">
+                            <div className="animate__animated animate__zoomIn animate__delay-1s relative w-60 h-40 rounded-2xl overflow-hidden shadow-lg">
                                 <Image
                                     src={slide.images[0]}
                                     alt="featured"
@@ -173,8 +174,7 @@ export default function HeroSlider() {
                     <button
                         key={i}
                         onClick={() => setCurrent(i)}
-                        className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-orange-500" : "w-2 bg-gray-300"
-                            }`}
+                        className={`h-2 rounded-full transition-all duration-300 ${i === current ? "w-6 bg-orange-500" : "w-2 bg-gray-300"}`}
                     />
                 ))}
             </div>
