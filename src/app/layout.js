@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SunCart – Summer Essentials",
+  title: "SunCart - Summer Essentials",
   description: "Your one-stop shop for summer essentials",
 };
 
