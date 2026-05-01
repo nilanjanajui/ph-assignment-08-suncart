@@ -7,7 +7,6 @@
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC?style=for-the-badge\&logo=tailwind-css)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge\&logo=mongodb)
 ![Auth](https://img.shields.io/badge/Auth-BetterAuth-purple?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)
 
 A modern, fully responsive eCommerce web application built for summer enthusiasts. SunCart lets users explore and purchase seasonal products — sunglasses, skincare, beach accessories, clothing, and more — with a clean UI, smooth animations, and secure authentication.
 
@@ -161,8 +160,4 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 This project is deployed on Vercel with environment variables configured in the Vercel dashboard. Any push to the `main` branch triggers an automatic production deployment.
 
----
 
-## 👩‍💻 Author
-
-**Nilanjana** — [https://github.com/nilanjanajui](https://github.com/nilanjanajui)
