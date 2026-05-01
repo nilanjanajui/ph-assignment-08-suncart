@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import toast from "react-hot-toast";
 import { FiSun, FiMenu, FiX, FiUser, FiLogOut } from "react-icons/fi";
@@ -13,6 +13,7 @@ export default function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const { data: session, isPending } = authClient.useSession();
     const router = useRouter();
+    const pathname = usePathname();
 
     const handleSignOut = async () => {
         await authClient.signOut();
@@ -26,6 +27,11 @@ export default function Navbar() {
         { label: "Products", href: "/products" },
         { label: "Profile", href: "/my-profile" },
     ];
+
+    const isActive = (href) => {
+        if (href === "/") return pathname === "/";
+        return pathname.startsWith(href);
+    };
 
     return (
         <nav className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
@@ -47,7 +53,11 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-gray-600 hover:text-orange-500 font-medium transition-colors"
+                            className={`font-medium transition-colors relative pb-0.5
+                                ${isActive(link.href)
+                                    ? "text-orange-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-linear-to-r after:from-orange-400 after:to-yellow-400 after:rounded-full"
+                                    : "text-gray-600 hover:text-orange-500"
+                                }`}
                         >
                             {link.label}
                         </Link>
@@ -134,7 +144,11 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             href={link.href}
-                            className="text-gray-700 hover:text-orange-500 font-medium"
+                            className={`font-medium transition-colors ${
+                                isActive(link.href)
+                                    ? "text-orange-500"
+                                    : "text-gray-700 hover:text-orange-500"
+                            }`}
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {link.label}
@@ -142,13 +156,6 @@ export default function Navbar() {
                     ))}
                     {session ? (
                         <>
-                            <Link
-                                href="/my-profile"
-                                className="text-gray-700 hover:text-orange-500 font-medium"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                My Profile
-                            </Link>
                             <button onClick={handleSignOut} className="text-left text-red-500 font-medium">
                                 Log Out
                             </button>
